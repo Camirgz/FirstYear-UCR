@@ -1,10 +1,13 @@
 import java.util.Random;
 
+
 public class BolsaDinosaurios {
 
+    //Variable Inicial
     String bolsa_de_dinosaurios = "ttttttttvvvvvvvvaaaaaaaabbbbbbbbddddddddssssssss";
 
-    public void primeraRonda() {
+    //Metodo para elegir 6 especies de manera aleatoria
+    public String primeraRonda() {
 
         //Variables
         String letrasSeleccionadas = "";
@@ -19,13 +22,17 @@ public class BolsaDinosaurios {
                     bolsa_de_dinosaurios.substring(indiceAleatorio + 1);
         }
 
-        //Salida
-        System.out.println("Letras seleccionadas en la primera ronda: " + letrasSeleccionadas);
-        System.out.println("Bolsa de dinosaurios actualizada: " + bolsa_de_dinosaurios);
+        return letrasSeleccionadas;
     }
 
     public static void main(String[] args) {
+
         BolsaDinosaurios juego = new BolsaDinosaurios();
-        juego.primeraRonda();
+
+        String jugador1 = juego.primeraRonda();
+        String jugador2 = juego.primeraRonda();
+
+        System.out.println(jugador1);
+        System.out.println(jugador2);
     }
 }
