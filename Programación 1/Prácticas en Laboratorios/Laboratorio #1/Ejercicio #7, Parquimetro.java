@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Parquimetro_Papi {
+class Parquimetro_Papi {
     public static void main (String[]args) {
         Scanner in = new Scanner(System.in);
 
