@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Pregunta_4_EscaleraDeHashtags {
+public class Pregunta4_EscaleraHashtags {
     public static void main(String args[]) {
         Scanner in = new Scanner(System.in);
         try {

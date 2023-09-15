@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Pregunta_5_CalculadoraDePromedioPonderada {
+public class Pregunta5_CalculadoraDePromedio {
     public static void main(String[] args) {
         
         // Scanner

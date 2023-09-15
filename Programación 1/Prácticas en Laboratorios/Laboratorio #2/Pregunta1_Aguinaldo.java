@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Solution {
+public class Pregunta1_Aguinaldo {
     public static void main(String[] args) {
 
         // Inicializacion de Variables

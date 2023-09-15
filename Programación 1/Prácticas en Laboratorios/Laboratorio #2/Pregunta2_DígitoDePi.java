@@ -1,7 +1,6 @@
 import java.util.Scanner;
 
-public
-class Ejercicio2 {
+public class Pregunta2_DígitoDePi{
     public static void main(String args[]) {
         Scanner in = new Scanner(System.in);
         int terminos = in.nextInt();
