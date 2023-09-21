@@ -25,14 +25,28 @@ public class BolsaDinosaurios {
         return letrasSeleccionadas;
     }
 
-    public static void main(String[] args) {
+    //DinoValidador
+    public boolean dinovalidador(char dino, String cartas) {
 
-        BolsaDinosaurios juego = new BolsaDinosaurios();
-
-        String jugador1 = juego.primeraRonda();
-        String jugador2 = juego.primeraRonda();
-
-        System.out.println(jugador1);
-        System.out.println(jugador2);
+        for (int i = 0; i <cartas.length(); i++ ){
+            char indiceCartas = cartas.charAt(i);
+            if (dino == indiceCartas) {
+                return true;
+            }
+        }
+        System.out.println("Entrada de dinosaurio inválida");
+        return false;
     }
+
+    //ZonaValidador
+    public boolean zonaValidador(int zona){
+        if (zona <= 6 && zona > 0){
+            return true;
+        }
+        System.out.println("Selección de zona inválida");
+        return false;
+    }
+
+
+
 }
