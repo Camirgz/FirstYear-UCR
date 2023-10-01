@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.util.Random;
 
-public class CerdoMétodos {
+public class CerdoMetodos {
 
     //Variables Globales
     //Puntaje de Jugadores
@@ -25,9 +25,9 @@ public class CerdoMétodos {
     int turno = 1;
     int valorDado = 0;
     int entradaJugadores = 0;
-    int cantidadPuntos = 20;
+    int cantidadPuntos = 10;
 
-    boolean plantarse = false;
+    boolean detenerTurno = false;
     boolean validadorEntrada = false;
     boolean hayGanador = false;
     boolean otraRonda = true;
@@ -69,10 +69,8 @@ public class CerdoMétodos {
         return valorDado;
     }
 
-
     //Turno
     public void cambioTurno() {
-        System.out.println("Turno de J" + turno);
         if (turno != entradaJugadores) {
             turno += 1;
         } else {
@@ -84,27 +82,27 @@ public class CerdoMétodos {
     public void ganador() {
         if (J1 > cantidadPuntos) {
             System.out.println("Felicidades J1 ha ganado!");
-            J1G += 1;
+            ++J1G;
         }
         if (J2 > cantidadPuntos) {
             System.out.println("Felicidades J2 ha ganado!");
-            J2G += 1;
+            ++J2G;
         }
         if (J3 > cantidadPuntos) {
             System.out.println("Felicidades J3 ha ganado!");
-            J3G += 1;
+            ++J3G;
         }
         if (J4 > cantidadPuntos) {
             System.out.println("Felicidades J4 ha ganado!");
-            J4G += 1;
+            ++J4G;
         }
         if (J5 > cantidadPuntos) {
             System.out.println("Felicidades J5 ha ganado!");
-            J5G += 1;
+            ++J5G;
         }
         if (J6 > cantidadPuntos) {
             System.out.println("Felicidades J6 ha ganado!");
-            J6G += 1;
+            ++J6G;
         }
     }
 
@@ -113,9 +111,10 @@ public class CerdoMétodos {
         if (J1 < cantidadPuntos && J2 < cantidadPuntos && J3 < cantidadPuntos && J4 < cantidadPuntos && J5 < cantidadPuntos && J6 < cantidadPuntos) {
             hayGanador = false;
         } else {
-            ganador();
+
+            detenerTurno = true;
             hayGanador = true;
-            plantarse = true;
+            valorDado = 80;
         }
     }
 
@@ -151,37 +150,40 @@ public class CerdoMétodos {
 
     //Juego
     public void juego() {
+        String entrada = "";
         int puntos = 0;
-        while (!plantarse) {
-            if (valorDado != 6) {
-                imprimirPuntajes(entradaJugadores);
+        while (!detenerTurno) {
+            imprimirPuntajes(entradaJugadores);
+            System.out.print("<<Turno de J" + turno + ">>    ");
+            System.out.println("El valor del dado es: " + valorDado);
+            if (valorDado < 6) {
+                System.out.println("Ingrese [D] para lanzar, o [P] para plantarse: "); //D de dado ;3
+                entrada = in.next();
                 puntos += valorDado;
-                System.out.println("El valor del dado es: " + valorDado);
-                System.out.println("Ingrese [D] para lanzar, o [P] para plantarse: ");
                 validadorEntrada = false; // Restablece validadorEntrada a false
                 while (!validadorEntrada) {
-                    String entrada = in.nextLine();
+
                     if (entrada.equalsIgnoreCase("D")) {
-                        valorDado = tirarDado();
                         validadorEntrada = true;
+                        valorDado = tirarDado();
                         hay_ganador();
                     } else if (entrada.equalsIgnoreCase("P")) {
                         sumadorPuntos(turno, puntos);
                         System.out.println("Ha decidido plantarse, avanza " + puntos + " casillas");
-                        imprimirPuntajes(entradaJugadores);
                         puntos = 0;
                         cambioTurno();
                         valorDado = tirarDado();
                         hay_ganador();
+                        break;
                     } else {
                         System.out.println("Entrada inválida, vuelva a ingresar un valor");
                     }
                 }
             }
             if (valorDado == 6) {
+                cambioTurno();
                 imprimirPuntajes(entradaJugadores);
                 puntos = 0;
-                cambioTurno();
                 validadorEntrada = true;
                 System.out.println("El valor del dado es: " + valorDado);
                 System.out.println("Fin del turno, sin puntos");
@@ -191,12 +193,10 @@ public class CerdoMétodos {
         }
     }
 
-
-
     //Cantidad de Jugadores
-    public void cantidadJugadores(){
+    public int cantidadJugadores() {
         do {
-            System.out.println("Por favor, ingresa un número entre 2 y 6:");
+            System.out.print("Ingrese la cantidad de jugadores: ");
             String entrada = in.nextLine();
 
             try {
@@ -210,22 +210,25 @@ public class CerdoMétodos {
                 System.out.println("Entrada inválida. Debe ser un número.");
             }
         } while (true);
+        return entradaJugadores;
     }
 
     //Hay otro ronda?
-    public void otraRonda() {
+    public boolean otraRonda() {
         System.out.println("Ingrese [R] para repetir y [S] para salir");
-        String entradaRonda = in.nextLine();
+        String entradaRonda = in.next();
+        boolean seguirJugando = true;
         if (entradaRonda.equalsIgnoreCase("R")) {
-            otraRonda = true;
+            seguirJugando = true;
         }
         if (entradaRonda.equalsIgnoreCase("S")) {
-            otraRonda = false;
+            seguirJugando = false;
         }
+        return seguirJugando;
     }
 
     //Cantidad final de ganadores
-    public void ganadores(int entradaJugadoresValidada){
+    public void ganadores(int entradaJugadoresValidada) {
         System.out.println("Partidas ganadas:");
         switch (entradaJugadoresValidada) {
             case 2: {
@@ -251,24 +254,45 @@ public class CerdoMétodos {
         }
     }
 
-    //Método Final
-    public void Ronda(){
-        System.out.println("=== Inicio de la partida ===");
-        cantidadJugadores();
-        while(otraRonda){
-            while (!hayGanador) {
-                valorDado = tirarDado();
-                juego();
-                System.out.println("¡La ronda ha terminado!");
-                otraRonda();
-            }
-        }
-        System.out.println("=== Fin de la partida ===");
-        ganadores(entradaJugadores);
+    public void restablecer() {
+        J1 = 0;
+        J2 = 0;
+        J3 = 0;
+        J4 = 0;
+        J5 = 0;
+        J6 = 0;
+
+
+        //Otras
+
+        turno = 1;
+        valorDado = 0;
+        entradaJugadores = 0;
+        cantidadPuntos = 10;
+
+        detenerTurno = false;
+        validadorEntrada = false;
+        hayGanador = false;
+        otraRonda = true;
     }
 
+    //Método Final
+    public void Ronda() {
+        int cantidadJugadores = cantidadJugadores();
+        boolean jugar = true;
+        do {
+            while (!hayGanador) {
+                System.out.println("=== Inicio de la partida ===");
+                valorDado = tirarDado();
+                juego();
+                ganador();
+                System.out.println("¡La ronda ha terminado!");
+                jugar = otraRonda();
+                System.out.println("=== Fin de la partida ===");
+            }
+            restablecer();
+        } while (jugar);
+        ganadores(cantidadJugadores);
+
+    }
 }
-
-
-
-

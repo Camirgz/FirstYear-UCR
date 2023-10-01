@@ -1,0 +1,11 @@
+Los exámenes de admisión para las universidades públicas consisten en más de 50 preguntas de selección única. Para los humanos, la revisión de tal cantidad de pruebas sería una tarea compleja, que tomaría mucho tiempo y además qu abriría la posibilidad de causar muchos errores. Para solucionarlo, se ha hecho un programa que es capaz de escanea las hojas de respuesta físicas de las personas que realizaron la prueba, leer los puntos marcados en cada casilla, y generar un vector con las respuestas de la persona. En esta lista, hay 5 valores posibles: "A", "B', "C", "D", o "NR" (si se d
+en blanco).
+Por ejemplo, si el examen tuviera 4 preguntas, un posible valor de vector sería { "A","C',"NR","B"}.
+El solucionario de la prueba, por tanto, consiste en una lista también, en donde cada espacio es la respuesta correcta i
+cada enunciado, en el mismo orden de preguntas.
+Haga un programa para complementar este otro, que genere una calificación porcentual de respuestas correctas.
+A partir de los 2 vectores (un solucionario y una respuesta de la persona tomada de la hoja de respuestas), debe compu y retornar la calificación del examen, sobre 100, e imprimirlo redondeado a entero. Asuma que todas las respuestas tienen igual valor sobre la calificación, y que las respuestas en blanco se califican como incorrectas.
+La entrada estándar serán 2 líneas de texto. La primera contiene las respuestas registradas de una hoja de examen, separadas por guiones. La segunda contiene el solucionario.
+Toda entrada que no respete el formato establecido, deberá generar la leyenda "Entrada invalida".
+Para este problema es requisito utilizar un método principal que convierta las entradas a vectores, y a partir de ahí
+manejar los datos como vectores.
