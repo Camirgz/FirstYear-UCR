@@ -177,6 +177,8 @@ public class CerdoMetodos {
                         break;
                     } else {
                         System.out.println("Entrada inválida, vuelva a ingresar un valor");
+                        System.out.println("Ingrese [D] para lanzar, o [P] para plantarse: "); //D de dado ;3
+                        entrada = in.next();
                     }
                 }
             }
