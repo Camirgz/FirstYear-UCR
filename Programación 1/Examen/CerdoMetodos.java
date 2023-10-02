@@ -1,3 +1,4 @@
+
 import java.util.Scanner;
 import java.util.Random;
 
@@ -21,16 +22,17 @@ public class CerdoMetodos {
     int J6G = 0;
 
     //Otras
+
     int turno = 1;
     int valorDado = 0;
     int entradaJugadores = 0;
-    int cantidadPuntos = 50;
+    int cantidadPuntos = 10;
 
     boolean detenerTurno = false;
     boolean validadorEntrada = false;
     boolean hayGanador = false;
     boolean otraRonda = true;
-    int cantidadJugadores = 0;
+    int cantidadJugadores=0;
 
     //Iniciar Imports
     Scanner in = new Scanner(System.in);
@@ -84,7 +86,7 @@ public class CerdoMetodos {
             System.out.println("Felicidades J1 ha ganado!");
             ++J1G;
         }
-        if (J2 >= cantidadPuntos) {
+        if (J2 >=cantidadPuntos) {
             System.out.println("Felicidades J2 ha ganado!");
             ++J2G;
         }
@@ -103,24 +105,6 @@ public class CerdoMetodos {
         if (J6 >= cantidadPuntos) {
             System.out.println("Felicidades J6 ha ganado!");
             ++J6G;
-        }
-    }
-
-    public boolean puntosSuficientes(int puntos) {
-        if ((J1 + puntos) >= cantidadPuntos) {
-            return true;
-        } else if ((J2 + puntos) >= cantidadPuntos) {
-            return true;
-        } else if ((J3 + puntos) >= cantidadPuntos) {
-            return true;
-        } else if ((J4 + puntos) >= cantidadPuntos) {
-            return true;
-        } else if ((J5 + puntos) >= cantidadPuntos) {
-            return true;
-        } else if ((J6 + puntos) >= cantidadPuntos) {
-            return true;
-        } else {
-            return false;
         }
     }
 
@@ -170,8 +154,7 @@ public class CerdoMetodos {
     public void juego() {
         String entrada = "";
         int puntos = 0;
-        boolean puntosSuficientes = false;
-        do {
+        while (!detenerTurno) {
             imprimirPuntajes(cantidadJugadores);
             System.out.print("<<Turno de J" + turno + ">>    ");
             System.out.println("El valor del dado es: " + valorDado);
@@ -179,19 +162,7 @@ public class CerdoMetodos {
                 System.out.println("Ingrese [D] para lanzar, o [P] para plantarse: "); //D de dado ;3
                 entrada = in.next();
                 puntos += valorDado;
-
-
-                // puntos>=
                 validadorEntrada = false; // Restablece validadorEntrada a false
-                puntosSuficientes = puntosSuficientes(puntos);
-                if (puntosSuficientes) {
-                    sumadorPuntos(turno, puntos);
-                    validadorEntrada = true;
-                    detenerTurno = true;
-                    valorDado = 80;
-                    break;
-
-                }
                 while (!validadorEntrada) {
 
                     if (entrada.equalsIgnoreCase("D")) {
@@ -211,8 +182,6 @@ public class CerdoMetodos {
                         System.out.println("Ingrese [D] para lanzar, o [P] para plantarse: "); //D de dado ;3
                         entrada = in.next();
                     }
-
-
                 }
             }
             if (valorDado == 6) {
@@ -225,7 +194,7 @@ public class CerdoMetodos {
                 valorDado = tirarDado();
                 hay_ganador();
             }
-        } while (!detenerTurno);
+        }
         ganador();
     }
 
@@ -252,7 +221,7 @@ public class CerdoMetodos {
 
     //Hay otro ronda?
     public boolean otraRonda() {
-        String entradaRonda = "";
+        String entradaRonda ="";
         while (true) {
             System.out.println("Ingrese [R] para repetir y [S] para salir");
             entradaRonda = in.next();
@@ -265,6 +234,7 @@ public class CerdoMetodos {
             }
         }
     }
+
 
     //Cantidad final de ganadores
     public void ganadores(int entradaJugadoresValidada) {
@@ -305,7 +275,9 @@ public class CerdoMetodos {
         J5 = 0;
         J6 = 0;
 
+
         //Otras
+
         turno = 1;
         valorDado = 0;
         entradaJugadores = 0;
@@ -329,7 +301,7 @@ public class CerdoMetodos {
                 juego();
                 System.out.println("=== Fin de la partida ===");
                 jugar = otraRonda();
-                if (!jugar) {
+                if(!jugar){
                     break;
                 }
             }
