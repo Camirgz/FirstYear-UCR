@@ -26,7 +26,7 @@ public class CerdoMetodos {
     int turno = 1;
     int valorDado = 0;
     int entradaJugadores = 0;
-    int cantidadPuntos = 50;
+    int cantidadPuntos = 15;
 
     boolean detenerTurno = false;
     boolean validadorEntrada = false;
