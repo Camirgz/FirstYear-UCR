@@ -1,4 +1,4 @@
-public class Main {
+public class SopaDeLetras {
     public static void main(String[] args) {
         int filas = 10;
         int cols = 12;
