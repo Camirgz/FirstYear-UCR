@@ -140,7 +140,7 @@ public class Metodos{
         do{
             continuar = 0;
             System.out.println("¿Cuál desea colocar?: ");
-            entrada = in.nextLine();
+            entrada = in.nextLine().toLowerCase();
             if (entrada.length()>1){
                 System.out.println("Entrada inválida. Ingrese sólo un dinosaurio.");
                 continuar = continuar +1;
