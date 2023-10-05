@@ -99,7 +99,7 @@ public class parquimetro{
         if (hora_parqueo > 3 && cine.equals("NO")){
             hora_cobro = hora_parqueo;
         }
-        if (hora_parqueo == 1 && mins_salida > mins_entrada && mins_salidamins_entrada < 30){
+        if (hora_parqueo == 1 && mins_salida > mins_entrada && mins_salida - mins_entrada < 30){
             hora_cobro = 0;
         }
         if (hora_parqueo == 1 && mins_salida < mins_entrada && (60 -
