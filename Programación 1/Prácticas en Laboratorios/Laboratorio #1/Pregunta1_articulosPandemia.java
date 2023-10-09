@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class articulosPandemia {
+public class Pregunta1_articulosPandemia {
     public static void main(String[]args)
     {
         Scanner in = new Scanner(System.in);

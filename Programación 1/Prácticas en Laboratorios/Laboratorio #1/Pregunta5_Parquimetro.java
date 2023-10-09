@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class parquimetro{
+public class Pregunta5_Parquimetro{
     public static void main (String[]args) {
         Scanner in = new Scanner(System.in);
         //Inicialización de Variables

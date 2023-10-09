@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class encontrarTalla {
+public class Pregunta4_EncontrarTalla {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int Talla = in.nextInt();
