@@ -5,6 +5,7 @@ public class Palindromos {
     public static boolean esPalindromo(String palabra) {
         // Modificar str
         palabra = palabra.replaceAll(" ", "").toLowerCase();
+        palabra = palabra.replaceAll(",",""); //Eliminar si el palindromo tiene
         int largo = palabra.length();
 
         // Arreglos
