@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Palindromos {
+public class Pregunta1_Palindromos {
     // Método para ver si es palíndromo
     public static boolean esPalindromo(String palabra) {
         // Modificar str

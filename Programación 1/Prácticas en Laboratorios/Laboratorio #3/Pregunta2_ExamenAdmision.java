@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class RespuestaCorrecta {
+public class Pregunta2_ExamenAdmision {
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
