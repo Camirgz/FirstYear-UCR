@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/Programación 1/Prácticas en Laboratorios/Laboratorio #1" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Programación 1/Prácticas en Laboratorios/Laboratorio #2" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Programación 1/Tareas Programadas/Tarea #1, Draftosaurus/Scripts" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Programación 1/Prácticas en Laboratorios/Laboratorio #3" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Programación 1/Examen" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Programación 1/Practicas en Clase" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Programación 1/Tareas Programadas/Tarea #1, Draftosaurus" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/out" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Programación 1/Prácticas en Laboratorios/Laboratorio #4" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Programación 1" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/out" />
+    <orderEntry type="jdk" jdkName="17" jdkType="JavaSDK" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

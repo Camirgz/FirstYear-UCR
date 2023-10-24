@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1283377d-9a62-4152-9df3-999a97bd41c8" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2VRbZprxASVBIRQzkD3unMgyQtA" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/Cami VS/Documents/GitHub/Universidad/Programación 1/Prácticas en Laboratorios/Laboratorio #4/Enunciados",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Console Colors",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Cami VS\Documents\GitHub\Universidad\Programación 1\Prácticas en Laboratorios\Laboratorio #4\Enunciados" />
+      <recent name="C:\Users\Cami VS\Documents\GitHub\Universidad\Programación 1\Prácticas en Laboratorios\Laboratorio #1\Enunciados" />
+      <recent name="C:\Users\Cami VS\Documents\GitHub\Universidad\Programación 1\Prácticas en Laboratorios\Laboratorio #3\Enunciados" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Cami VS\Documents\GitHub\Universidad\Instalaciones" />
+      <recent name="C:\Users\Cami VS\Documents\GitHub\Universidad\Programación 1\Prácticas en Laboratorios\Laboratorio #3\Enunciados" />
+      <recent name="C:\Users\Cami VS\Documents\GitHub\Universidad\Programación 1\Tareas Programadas\Tarea #1, Draftosaurus\Scripts" />
+      <recent name="C:\Users\Cami VS\Documents\GitHub\Universidad\Programación 1\Prácticas en Laboratorios\Laboratorio #2" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1283377d-9a62-4152-9df3-999a97bd41c8" name="Changes" comment="" />
+      <created>1694801897749</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1694801897749</updated>
+      <workItem from="1694801899104" duration="8314000" />
+      <workItem from="1694829140712" duration="3427000" />
+      <workItem from="1695167214099" duration="7405000" />
+      <workItem from="1695332130079" duration="105000" />
+      <workItem from="1695334523855" duration="97000" />
+      <workItem from="1695526370372" duration="23000" />
+      <workItem from="1695690176721" duration="610000" />
+      <workItem from="1695690808186" duration="56717000" />
+      <workItem from="1696210323353" duration="1126000" />
+      <workItem from="1696431147569" duration="2756000" />
+      <workItem from="1696814566029" duration="3420000" />
+      <workItem from="1698108669486" duration="2385000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.ArrayIndexOutOfBoundsException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
