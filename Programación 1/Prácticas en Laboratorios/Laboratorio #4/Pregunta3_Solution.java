@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Solution {
+public class Pregunta3_Solution {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         String file = "";
@@ -12,7 +12,7 @@ public class Solution {
             file += line + "\n";
         }
         String[] params = file.split("\n");
-        Repositorio register = new Repositorio(nombreRepositorio, params);
+        Pregunta3_Repositorio register = new Pregunta3_Repositorio(nombreRepositorio, params);
         String movie = in.nextLine();
         double score = Double.parseDouble(in.nextLine());
         register.registrarCalificacion(movie, score);

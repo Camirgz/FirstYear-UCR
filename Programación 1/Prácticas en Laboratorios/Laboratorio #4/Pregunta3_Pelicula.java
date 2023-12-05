@@ -1,13 +1,11 @@
-import java.util.*;
-
-class Pelicula {
+class Pregunta3_Pelicula {
     private String nombre;
     private int ano;
     private double promedioCalificaciones;
     private int cantidadCalificaciones;
 
     // Constructor de Pelicula
-    public Pelicula(String nombre, int ano, String calificaciones) {
+    public Pregunta3_Pelicula(String nombre, int ano, String calificaciones) {
         this.nombre = nombre;
         this.ano = ano;
         this.promedioCalificaciones = calcularPromedio(calificaciones);

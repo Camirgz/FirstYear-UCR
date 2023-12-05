@@ -1,12 +1,12 @@
 import java.util.HashMap;
 import java.util.Map;
 
-class Repositorio {
+class Pregunta3_Repositorio {
     private String nombreRepositorio;
-    private Map<String, Pelicula> peliculas;
+    private Map<String, Pregunta3_Pelicula> peliculas;
 
     // Constructor de Repositorio
-    public Repositorio(String nombreRepo, String[] datosPeliculas) {
+    public Pregunta3_Repositorio(String nombreRepo, String[] datosPeliculas) {
         this.nombreRepositorio = nombreRepo;
         this.peliculas = new HashMap<>();
 
@@ -20,7 +20,7 @@ class Repositorio {
                 int anoPelicula = Integer.parseInt(nombreAno[1].split("\\)")[0]);
                 String calificaciones = partes[2];
 
-                Pelicula pelicula = new Pelicula(nombrePelicula, anoPelicula, calificaciones);
+                Pregunta3_Pelicula pelicula = new Pregunta3_Pelicula(nombrePelicula, anoPelicula, calificaciones);
                 peliculas.put(nombrePelicula, pelicula);
             }
         }
@@ -28,7 +28,7 @@ class Repositorio {
 
     // Método para registrar una calificación
     public void registrarCalificacion(String nombrePelicula, double calificacion) {
-        Pelicula pelicula = peliculas.get(nombrePelicula);
+        Pregunta3_Pelicula pelicula = peliculas.get(nombrePelicula);
         if (pelicula != null) {
             pelicula.registrarCalificacion(calificacion);
         } else {
@@ -38,7 +38,7 @@ class Repositorio {
 
     // Método para imprimir información de una película
     public void imprimirInformacion(String nombrePelicula) {
-        Pelicula pelicula = peliculas.get(nombrePelicula);
+        Pregunta3_Pelicula pelicula = peliculas.get(nombrePelicula);
         if (pelicula != null) {
             System.out.println(pelicula.imprimirPelicula());
         } else {
@@ -50,7 +50,7 @@ class Repositorio {
     public double obtenerPromedioGeneral() {
         double sumaPromedios = 0.0;
         int cantidadPeliculas = peliculas.size();
-        for (Pelicula pelicula : peliculas.values()) {
+        for (Pregunta3_Pelicula pelicula : peliculas.values()) {
             sumaPromedios += pelicula.obtenerPromedio();
         }
         return sumaPromedios / cantidadPeliculas;
