@@ -1,8 +1,8 @@
-public class agente {
+public class Agente {
     String IdAgente;
     String todas_sus_ventas = "";
 
-    public agente(String IdAgente, String venta) {
+    public Agente(String IdAgente, String venta) {
         this.IdAgente = IdAgente;
         this.todas_sus_ventas = venta;
     }
