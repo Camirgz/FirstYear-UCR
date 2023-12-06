@@ -1,12 +1,12 @@
 import java.util.Scanner;
 
-public class interaccion {
+public class Interaccion {
     Agente[] agentes = new Agente[1000];
     int cantidadAgentes = 0;
     String errores = "";
     int cantidadErrores;
 
-    public interaccion() {
+    public Interaccion() {
         CargarInformacion();
         Imprimir();
 
